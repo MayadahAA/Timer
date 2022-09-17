@@ -95,12 +95,12 @@ form button {
     align-items: center;
     font-weight: bold;
     height: 30%;
-    font-size: 24px;
+    font-size: 1rem;
 }
 .progress-ring {
     position: absolute;
     top: 50%;
-    left: 56%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 .progress-ring__circle {
