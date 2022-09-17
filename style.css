@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 :root {
-    --blue: #4c00ff;
+    --blue: #430ec0;
     --white: #ede3ff;
     --red: #ff2323;
 }
@@ -19,6 +19,7 @@ body{
     background: var(--blue);
     color: var(--white);
     font-family: "Montserrat", sans-serif;
+    margin-left: auto;
 }
 h1 {
     margin: 0.94rem 0;
@@ -71,20 +72,20 @@ form button {
     color: var(--blue);
 }
 .break {
-    background: #4b415e;
+    background: #be9bff;
     color: #4c00ff;
 }
 .reset {
-    background: #ede3ff;
-    color: rgb(76, 0, 255);
+    background: var(--white);
+    color: var(--blue);
 }
 .pause {
-    background: #ede3ff;
-    color: #4c00ff;
+    background: var(--white);
+    color: var(--blue);
 }
 .resume {
-    background: #ede3ff;
-    color: #4c00ff;
+    background: var(--white);
+    color: var(--blue);
 }
 .clock {
     padding: 3px;
@@ -94,12 +95,12 @@ form button {
     align-items: center;
     font-weight: bold;
     height: 30%;
-    font-size: medium;
+    font-size: 24px;
 }
 .progress-ring {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 56%;
     transform: translate(-50%, -50%);
 }
 .progress-ring__circle {
@@ -107,6 +108,7 @@ form button {
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
     stroke: var(--white);
+    margin: auto;
 }
 footer {
     position: fixed;
