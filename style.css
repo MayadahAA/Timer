@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+:root {
+    --blue: #4c00ff;
+    --white: #ede3ff;
+    --red: #ff2323;
+}
+body{
+    height: 100vh;
+    padding: 2.2rem;
+    background: var(--blue);
+    color: var(--white);
+    font-family: "Montserrat", sans-serif;
+}
+h1 {
+    margin: 0.94rem 0;
+    font-weight: 900;
+    font-size: 28px;
+    text-align: center;
+}
+input{
+    transition: 0.5 ease-in-out;
+    margin: 0.94rem 0;
+    font-size: 18px;
+    padding: 5px;
+    background: var(--white);
+    border: none;
+    border-radius: 0.2rem;
+}
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    margin: 2.2rem;
+    border-radius: 0.2rem;
+}
+button{
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    transition: 0.5s ease-in-out;
+    border-radius: 0.2rem;
+}
+form{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    max-width: 370px;
+    margin: 5px auto;
+    border-radius: 0.2rem;
+}
+form button {
+    background: var(--white);
+    border-radius: 0.2rem;
+    width: 100%;
+    color: var(--blue);
+}
+.start {
+    background: var(--white);
+    color: var(--blue);
+}
+.break {
+    background: #4b415e;
+    color: #4c00ff;
+}
+.reset {
+    background: #ede3ff;
+    color: rgb(76, 0, 255);
+}
+.pause {
+    background: #ede3ff;
+    color: #4c00ff;
+}
+.resume {
+    background: #ede3ff;
+    color: #4c00ff;
+}
+.clock {
+    padding: 3px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 30%;
+    font-size: medium;
+}
+.progress-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.progress-ring__circle {
+    transition: 0.5s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke: var(--white);
+}
+footer {
+    position: fixed;
+    bottom: 40px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.danger {
+    stroke: var(--red);
+    animation: pulse 0.9s ease-in-out infinite;
+}
+@keyframes pulse {
+    0%,
+    100% {
+        transform: rotate(-90deg) scale(1);
+    }
+    50% {
+        transform: rotate(-90deg) scale(1.05);
+    }
+    75% {
+        transform: rotate(-90deg) scale(0.8);
+    }
+}
+@media screen and (min-width: 768px) {
+    body{
+        display: grid;
+        grid-template-areas: "head head" "clock form" "btns ji";
+    }
+    .btn-group {
+        grid-area: btns;
+        justify-content: center;
+    }
+    .clock {
+        grid-area: clock;
+        height: 100%;
+    }
+    h1 {
+        grid-area: head;
+        align-self: center;
+    }
+    form {
+        align-self: center;
+        justify-self: center;
+        grid-area: form;
+        width: 100%;
+        justify-content: space-around;
+    }
+    footer {
+        width: 100%;
+    }
+}
